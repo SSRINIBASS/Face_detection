@@ -4,14 +4,14 @@ import cv2
 import numpy as np
 from keras.models import load_model
 
-classifier = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
+classifier = cv2.CascadeClassifier(r'C:\Users\srini\Desktop\DEV\Face_detection\haarcascade_frontalface_default.xml')
 
-model = load_model("final_model.h5")
+model = load_model(r'C:\Users\srini\Desktop\DEV\Face_detection\final_model.h5')
 
-URL = 'http://192.168.33.78:8080/shot.jpg'
+URL = 'http://192.168.147.145:8080/shot.jpg'
 
 def get_pred_label(pred):
-    labels = ["akash","chandru","rakesh","shiva","siddhant"]
+    labels = ["Aditya","Debu","Mikul","Srinibas"]
     return labels[pred]
 
 def preprocess(img):
